@@ -1,0 +1,17 @@
+imagesAtDirectory=`ls /Users/michaeldouglas/Desktop/images/*.png`
+echo "\n Aguarde, estamos procurando sua imagem....\n"
+# limpa o arquivo txt caso ele exista
+> trabalhoSO/imagens.txt
+for image in $imagesAtDirectory
+do
+   # printa no terminal o conteúdo
+   echo $image
+   # salva o conteúdo no arquivo especificado
+   # lembrando que trabalhoSO é a mesma pasta do arquivo txt
+   # por isso especifiquei a pasta pra salvar no mesmo diretório
+   echo $image | cut -f 1 -d '.' >> trabalhoSO/imagens.txt
+done
+echo "\n###########################################"
+echo "Imagem Lida e Salva"
+echo "###########################################\n"
+
