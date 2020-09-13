@@ -1,0 +1,14 @@
+//le linhas de um txt e insere uma extensao aos arquivos 
+
+
+
+imagesAtDirectory=`ls /Users/alcidesjunior/Desktop/trabalhoSO/imagens.txt`
+echo "\n Aguarde, estamos recuperando suass imagens....\n"
+count=1
+while read line; do
+echo "$line.png"
+count=$((count+1))
+done < $imagesAtDirectory
+echo "\n###########################################"
+echo "Imagens recuperadas"
+echo "###########################################\n"
